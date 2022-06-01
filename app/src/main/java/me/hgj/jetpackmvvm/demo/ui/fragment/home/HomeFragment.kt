@@ -1,5 +1,6 @@
 package me.hgj.jetpackmvvm.demo.ui.fragment.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.fragment.app.viewModels
@@ -25,6 +26,7 @@ import me.hgj.jetpackmvvm.demo.app.weight.recyclerview.SpaceItemDecoration
 import me.hgj.jetpackmvvm.demo.data.model.bean.BannerResponse
 import me.hgj.jetpackmvvm.demo.data.model.bean.CollectBus
 import me.hgj.jetpackmvvm.demo.databinding.FragmentHomeBinding
+import me.hgj.jetpackmvvm.demo.ui.activity.ActionActivity
 import me.hgj.jetpackmvvm.demo.ui.adapter.AriticleAdapter
 import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestCollectViewModel
 import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestHomeViewModel
@@ -71,6 +73,10 @@ class HomeFragment : BaseFragment1<HomeViewModel, FragmentHomeBinding>() {
                 when (it.itemId) {
                     R.id.home_search -> {
                         nav().navigateAction(R.id.action_mainfragment_to_searchFragment)
+                    }
+
+                    R.id.home_action -> {
+                        activity?.apply { startActivity(Intent(this, ActionActivity::class.java)) }
                     }
                 }
                 true

@@ -7,4 +7,10 @@
         android:icon="@drawable/ic_search"
         android:title="搜索"
         app:showAsAction="always" />
+
+    <item
+        android:id="@+id/home_action"
+        android:title="action"
+        app:showAsAction="always" />
+
 </menu>
