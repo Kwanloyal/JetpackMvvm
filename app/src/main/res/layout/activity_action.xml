@@ -26,13 +26,30 @@
         app:layout_constraintHorizontal_weight="1"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/tv_right"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_pager2"/>
+        app:layout_constraintEnd_toStartOf="@id/tv_middle"
+        app:layout_constraintTop_toBottomOf="@id/view_pager2"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <!--app:layout_constraintEnd_toStartOf="@id/tv_right"-->
     <!--得建立链条关系-->
     <!--app:layout_constraintStart_toEndOf="@id/tv_left"-->
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_middle"
+        android:text="中间"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@color/accent"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tv_left"
+        app:layout_constraintEnd_toStartOf="@id/tv_right"
+        app:layout_constraintTop_toBottomOf="@id/view_pager2"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_right"
@@ -46,8 +63,9 @@
         android:paddingBottom="15dp"
         app:layout_constraintHorizontal_weight="1"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/tv_left"
+        app:layout_constraintStart_toEndOf="@id/tv_middle"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_pager2"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
